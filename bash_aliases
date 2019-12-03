@@ -60,3 +60,15 @@ cdl() { cd "$@" && ls; }
 # Alias web logs
 alias logs='tail -f /etc/httpd/logs/access_log /etc/httpd/logs/error_log /var/log/mariadb/mariadb.log'
 
+#alias cat.without.comments.#.4.bash="grep -v '^#' "
+#alias cat.without.comments.comma.4.php="grep -v '^;' "
+alias cat.without.comments="grep -E -v '^\s*($|;|#)' "
+
+# https://www.mkdocs.org/
+# mkdocs doit se lancer avec python3
+# les extentions doivent s'installer avec pip3
+# Ex:   pip3 install https://github.com/bmcorser/fontawesome-markdown/archive/master.zip
+#       pip3 install pymdown-extensions
+# Usage :   python3 /usr/local/bin/mkdocs serve -a 0.0.0.0:9500
+#           mkdocs serve -a 0.0.0.0:9500
+alias mkdocs="python3 /usr/local/bin/mkdocs "
